@@ -371,6 +371,10 @@
       NSUInteger location = [scanner scanLocation];
       [scanner scanUpToString:@"]]" intoString:&url];
       [scanner setScanLocation:location];
+      [scanner scanUpToString:@"_itv" intoString:nil];
+      [scanner scanString:@"_itv" intoString:nil];
+      [scanner scanUpToString:@"_" intoString:&itvRate];
+      [scanner setScanLocation:location];
       [scanner scanUpToString:@"_PC01" intoString:nil];
       [scanner scanString:@"_PC01" intoString:nil];
       [scanner scanUpToString:@"_" intoString:&itvRate];
